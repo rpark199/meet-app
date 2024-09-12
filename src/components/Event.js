@@ -7,7 +7,8 @@ const Event = ({ event }) => {
       <div className="eventSummary">
         <h2>{event.summary}</h2>
         <p>{event.location}</p>
-        <p>{event.created}</p>
+        <p>{event.start?.dateTime || ""}</p>
+        <p>{event.end?.dateTime || ""}</p>
       </div>
       {showDetails ? (
         <div className="eventDetails">

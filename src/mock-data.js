@@ -1,15 +1,4 @@
 const mockData = [
-  {
-    "kind": "calendar#events",
-    "etag": "\"p32cc3bc1i78oe0o\"",
-    "summary": "fullstackwebdev@careerfoundry.com",
-    "description": "",
-    "updated": "2024-07-31T11:04:50.895Z",
-    "timeZone": "Europe/Berlin",
-    "accessRole": "reader",
-    "defaultReminders": [],
-    "nextPageToken": "EiwKKhIoCgYIkP7M-QUSHgocCho2Y28wb2psMGwwajByYmgzZzU2dmxjMnM5acA-AQ==",
-    "items": [
     {
       "kind": "calendar#event",
       "etag": "\"3181161784712000\"",
@@ -15070,8 +15059,6 @@ const mockData = [
     },
     "eventType": "default"
     }
-  ]
-  }
 ];
 
 export default mockData;
