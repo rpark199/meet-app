@@ -1,36 +1,39 @@
-import './App.css';
-import { useEffect, useState } from 'react';
-import EventList from './components/EventList';
-import CitySearch from './components/CitySearch';
-import NumberOfEvents from './components/NumberOfEvents';
-import { extractLocations, getEvents } from './api';
+import { useEffect, useState } from "react";
+import CitySearch from "./components/CitySearch";
+import EventList from "./components/EventList";
+import NumberOfEvents from "./components/NumberOfEvents";
+import { getEvents, extractLocations } from "./api";
+import "./App.css";
+import mockData from "./mock-data";
+
 
 const App = () => {
-  const [events, setEvents] = useState([]);
-  const [currentNOE, setcurrentNOE] = useState(32);
   const [allLocations, setAllLocations] = useState([]);
+  const [currentNOE, setCurrentNOE] = useState(32);
+  const [events, setEvents] = useState([]);
   const [currentCity, setCurrentCity] = useState("See all cities");
+
+  const fetchData = async () => {
+    const allEvents = mockData;
+    const filteredEvents =
+      currentCity === "See all cities"
+        ? allEvents
+        : allEvents.filter((event) => event.location === currentCity);
+    setEvents(filteredEvents.slice(0, currentNOE));
+    setAllLocations(extractLocations(allEvents));
+  };
 
   useEffect(() => {
     fetchData();
   }, [currentCity]);
 
-  const fetchData = async () => {
-    const allEvents = await getEvents();
-    const filteredEvents = currentCity === "See all cities" ?
-      allEvents :
-      allEvents.filter(event => event.location === currentCity)
-    setEvents(filteredEvents.slice(0, currentNOE));
-    setAllLocations(extractLocations(allEvents));
-  }
   return (
     <div className="App">
       <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} />
-      <NumberOfEvents />
+      <NumberOfEvents setCurrentNOE={setCurrentNOE} />
       <EventList events={events} />
     </div>
   );
-}
+};
 
 export default App;
-
