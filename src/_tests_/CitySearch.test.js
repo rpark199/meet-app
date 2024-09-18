@@ -9,6 +9,7 @@ describe('<CitySearch /> component', () => {
   beforeEach(() => {
     CitySearchComponent = render(<CitySearch allLocations={[]}/>);
   });
+
   test('renders text input', () => {
     const cityTextBox = CitySearchComponent.queryByRole('textbox');
     expect(cityTextBox).toBeInTheDocument();
@@ -24,6 +25,7 @@ describe('<CitySearch /> component', () => {
     const user = userEvent.setup();
     const cityTextBox = CitySearchComponent.queryByRole('textbox');
     await user.click(cityTextBox);
+    
     const suggestionList = CitySearchComponent.queryByRole('list');
     expect(suggestionList).toBeInTheDocument();
     expect(suggestionList).toHaveClass('suggestions');
@@ -88,5 +90,5 @@ describe('<CitySearch /> integration', () => {
 
     const suggestionListItems = within(CitySearchDOM).queryAllByRole('listitem');
     expect(suggestionListItems.length).toBe(allLocations.length + 1);
- });
+  });
 });
