@@ -14,6 +14,7 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
     const filteredLocations = allLocations ? allLocations.filter((location) => {
       return location.toUpperCase().indexOf(value.toUpperCase()) > -1;
     }) : [];
+
     setQuery(value);
     setSuggestions(filteredLocations);
   };
@@ -29,8 +30,6 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
       <div id="city-search">
         <input 
           type="text"
-          id="city-search"
-          role="textbox"
           className="city"
           placeholder="Search for a city"
           value={query}
