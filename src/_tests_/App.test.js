@@ -1,16 +1,24 @@
-import { render, screen, waitFor, within } from "@testing-library/react";
+import { render, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { getEvents } from "../api";
 import App from "../App";
 import mockData from "../mock-data";
 
 describe("<App /> component", () => {
-  test("List of events", async () => {
-    const { container } = render(<App />);
-    const component = await waitFor(() =>
-      screen.getByRole("event-list", { container })
-    );
-    expect(component).toBeDefined();
+  let AppDOM;  
+  beforeEach(() => { 
+    AppDOM = render(<App/>).container.firstChild;
+  });
+  test('renders list of events', () => {
+    expect(AppDOM.querySelector('#event-list')).toBeInTheDocument();
+  }) 
+
+  test('render CitySearch', () => { 
+    expect(AppDOM.querySelector('#city-search')).toBeInTheDocument();
+  });
+
+  test('render NumberOfEvents', () => {
+    expect(AppDOM.querySelector('#number-of-events')).toBeInTheDocument();
   });
 });
 
@@ -42,5 +50,14 @@ describe("<App /> integration", () => {
       expect(event.textContent).toContain("Berlin, Germany");
     });
   });
-});
 
+  test('renders a list of events matching the number selected by the user', async () => {
+    const AppComponent = render(<App />);
+    const AppDOM = AppComponent.container.firstChild;
+    const EventListDOM = AppDOM.querySelector('#event-list');  
+    await waitFor(() => {
+      const EventListItems = within(EventListDOM).queryAllByRole('listitem');
+      expect(EventListItems.length).toBe(32);
+    });
+  });
+});
