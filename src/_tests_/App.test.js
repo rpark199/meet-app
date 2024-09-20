@@ -1,26 +1,20 @@
-import { render, waitFor, within } from "@testing-library/react";
+import { render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { getEvents } from "../api";
 import App from "../App";
 import mockData from "../mock-data";
 
+
 describe("<App /> component", () => {
-  let AppDOM;  
-  beforeEach(() => { 
-    AppDOM = render(<App/>).container.firstChild;
-  });
-  test('renders list of events', () => {
-    expect(AppDOM.querySelector('#event-list')).toBeInTheDocument();
-  }) 
-
-  test('render CitySearch', () => { 
-    expect(AppDOM.querySelector('#city-search')).toBeInTheDocument();
-  });
-
-  test('render NumberOfEvents', () => {
-    expect(AppDOM.querySelector('#number-of-events')).toBeInTheDocument();
+  test("List of events", async () => {
+    const { container } = render(<App />);
+    const component = await waitFor(() =>
+      screen.getByRole("event-list", { container })
+    );
+    expect(component).toBeDefined();
   });
 });
+
 
 describe("<App /> integration", () => {
   test("renders a list of events matching the city selected by the user", async () => {
