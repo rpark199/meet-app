@@ -17,7 +17,7 @@ defineFeature(feature, test => {
             AppComponent = render(<App />)
         });
   
-        then('the user should see the list of upcoming events.',  async () => {
+        then('the user should see the list of all upcoming events.',  async () => {
             const AppDOM = AppComponent.container.firstChild;
             const EventListDOM = AppDOM.querySelector('#event-list');
 
@@ -28,11 +28,9 @@ defineFeature(feature, test => {
         });
     });
 
-    test('User should see a list of suggestions when they search for a city', ({ given, when, then }) => {
-        
-        let AppComponent;
+    test('User should see a list of suggestions when they search for a city.', ({ given, when, then }) => {
         given('the main page is open', () => {
-            AppComponent = render(<App />);
+            const AppComponent = render(<App />);
         });
 
         let CitySearchDOM;
@@ -44,7 +42,7 @@ defineFeature(feature, test => {
             await user.type(citySearchInput, "Berlin");
         });
 
-        then('the user should receive a list of cities (suggestions) that match what >they’ve typed', async () => {
+        then('the user should receive a list of cities (suggestions) that match what they’ve typed', async () => {
             await waitFor(() => {
                 const suggestionListItems = within(CitySearchDOM).queryAllByRole('listitem'); 
                 expect(suggestionListItems).toHaveLength(2);
@@ -52,7 +50,7 @@ defineFeature(feature, test => {
         });
     });
 
-    test('User can select a city from the suggested list', ({ given, and, when, then }) => {
+    test('User can select a city from the suggested list.', ({ given, and, when, then }) => {
         let AppComponent;
         let AppDOM;
         let CitySearchDOM;
