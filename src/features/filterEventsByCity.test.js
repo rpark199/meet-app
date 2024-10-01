@@ -87,5 +87,4 @@ defineFeature(feature, test => {
             expect(EventListItems).toHaveLength(berlinEvents.length);
         });
     });
-
 });
