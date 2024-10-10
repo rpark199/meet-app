@@ -26,6 +26,13 @@ const App = () => {
   }
 
   useEffect(() => {
+    if (navigator.onLine) {
+      setWarningAlert("");
+    } else {
+      setWarningAlert(
+        "You are offline, all events are being loaded from cache."
+      );
+    }
     fetchData();
   }, [currentCity, currentNOE]);
 
@@ -43,6 +50,7 @@ const App = () => {
         allLocations={allLocations} 
         setCurrentCity={setCurrentCity}
         setInfoAlert={setInfoAlert} 
+        infoAlert={infoAlert}
       />
       <NumberOfEvents 
         currentNOE = {currentNOE} 

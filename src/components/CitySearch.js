@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 
-const CitySearch = ({ allLocations, setCurrentCity, setInfoAlert }) => {
+const CitySearch = ({ allLocations, setCurrentCity, setInfoAlert, infoAlert }) => {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
+
 
   useEffect(() => {
     setSuggestions(allLocations);
@@ -37,6 +38,7 @@ const CitySearch = ({ allLocations, setCurrentCity, setInfoAlert }) => {
     
   return (
       <div id="city-search">
+          {infoAlert}
         <input 
           type="text"
           className="city"
