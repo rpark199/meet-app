@@ -4,7 +4,7 @@ import EventList from "./components/EventList";
 import NumberOfEvents from "./components/NumberOfEvents";
 import { getEvents, extractLocations } from "./api";
 import "./App.css";
-import { mockData } from "./mock-data";
+//import { mockData } from "./mock-data";
 import { InfoAlert, ErrorAlert, WarningAlert } from './components/Alert';
 
 const App = () => {
@@ -30,7 +30,7 @@ const App = () => {
       setWarningAlert("");
     } else {
       setWarningAlert(
-        "You are offline, all events are being loaded from cache."
+      "You are offline, all events are being loaded from cache."
       );
     }
     fetchData();
@@ -53,8 +53,9 @@ const App = () => {
         infoAlert={infoAlert}
       />
       <NumberOfEvents 
-        currentNOE = {currentNOE} 
-        setCurrentNOE={setCurrentNOE} 
+        setCurrentNOE={setCurrentNOE}
+        setInfoAlert={setInfoAlert}
+        setErrorAlert={setErrorAlert}
       />
       </section>
       <EventList events={events} />
