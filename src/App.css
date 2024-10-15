@@ -86,3 +86,30 @@ input[type="number"] {
   outline: none;
   cursor: pointer;
 }
+
+.alerts-container {
+  position: fixed;
+  top: 0px;
+  left: 20px;
+  width: 250px;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  body {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+
+  .charts-container {
+    grid-template-columns: 1fr;
+  }
+
+  #event-list {
+    grid-template-columns: 1fr;
+  }
+
+  .event:last-child{
+    border-bottom: 1px solid #d4d5d6;
+  }
+}
