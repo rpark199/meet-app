@@ -85,7 +85,9 @@ For my Meet App, I will be using serverless functions to build my app. This will
 Meet utilizes CI/CD practices to ensure the app is always in a deployable state. Automated tests run frequently to catch issues early, and deployment to the production environment is streamlined for quick and reliable updates.
 
 ### Key Technologies Used
-#### - React: For building the user interface.
-- Bootstrap: For responsive design and UI components.
-- PWA Support: To allow the app to be installed as a shortcut on mobile devices.
-- Jest and Puppeteer: For automated testing and end-to-end test coverage.
+- **React:** For building the user interface.
+- **Bootstrap:** For responsive design and UI components.
+- **PWA Support:** To allow the app to be installed as a shortcut on mobile devices.
+- **Jest and Puppeteer:** For automated testing and end-to-end test coverage.
+
+## Installation and Setup
