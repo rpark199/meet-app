@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import CitySearch from "./components/CitySearch";
 import EventList from "./components/EventList";
 import NumberOfEvents from "./components/NumberOfEvents";
+import CityEventsChart from "./components/CityEventsChart";
+import EventGenresChart from "./components/EventGenresChart";
 import { getEvents, extractLocations } from "./api";
 import "./App.css";
 //import { mockData } from "./mock-data";
@@ -38,9 +40,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <section className="header">
       <h1>Meet App</h1>
-      <p>Find events in nearby cities</p>
       <div className = "alerts-container">
         {infoAlert.length ? <InfoAlert text={infoAlert}/> : null}
         {errorAlert.length ? <ErrorAlert text={errorAlert} /> : null}
@@ -49,15 +49,15 @@ const App = () => {
       <CitySearch 
         allLocations={allLocations} 
         setCurrentCity={setCurrentCity}
-        setInfoAlert={setInfoAlert} 
-        infoAlert={infoAlert}
-      />
+        setInfoAlert={setInfoAlert} />
       <NumberOfEvents 
         setCurrentNOE={setCurrentNOE}
         setInfoAlert={setInfoAlert}
-        setErrorAlert={setErrorAlert}
-      />
-      </section>
+        setErrorAlert={setErrorAlert} />
+      <div className="charts-container">
+        <EventGenresChart events={events} />
+        <CityEventsChart allLocations={allLocations} events={events} />
+      </div>
       <EventList events={events} />
     </div>
   );
