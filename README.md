@@ -10,7 +10,7 @@ For my Meet App, I will be using serverless functions to build my app. This will
 - Recharts
 
 ## Live Link
-[View Meet Online](
+[View Meet Online](https://rpark199.github.io/meet-app/)
 
 ## Feature 1: Filter Events by City
 Scenario 1: When user hasn't searched for a city, show upcoming events from all cities.
