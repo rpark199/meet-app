@@ -13,7 +13,7 @@ For my Meet App, I will be using serverless functions to build my app. This will
 [View Meet Online](https://rpark199.github.io/meet-app/)
 
 ## Features
-Feature 1: Filter Events by City
+1. Filter Events by City
 Scenario 1: When user hasn't searched for a city, show upcoming events from all cities.
 Given: The user is viewing a map. And the user views list of upcoming events.
 When: The user views the list of event that's next to a map.
