@@ -29,38 +29,38 @@ For my Meet App, I will be using serverless functions to build my app. This will
   - When: The user clicks on a city.
   - Then: There will be see a list of events from the suggested list.
 
-Feature 2: Show/Hide Event Details
-Scenario 1: An event element is collapsed by default.
-Given: The user has not selected an event.
-When: The user views a list of event.
-Then: The event elements are collapsed.
+2. Show/Hide Event Details
+- Scenario 1: An event element is collapsed by default.
+  - Given: The user has not selected an event.
+  - When: The user views a list of event.
+  - Then: The event elements are collapsed.
 
-Scenario 2: User can expand an event to see its details.
-Given: The user is viewing the event details page.
-When: The user clicks on a button for a specific function.
-Then: The event details section either expands or collapses, showing or hiding additional information about the events.
+- Scenario 2: User can expand an event to see its details.
+  - Given: The user is viewing the event details page.
+  - When: The user clicks on a button for a specific function.
+  - Then: The event details section either expands or collapses, showing or hiding additional information about the events.
 
-Scenario 3: User can collapse an event to hide its details.
-Given: The user see events has been expanded.
-When: The user clicks to collapse the event.
-Then: It is back to it's default element.
+- Scenario 3: User can collapse an event to hide its details.
+  - Given: The user see events has been expanded.
+  - When: The user clicks to collapse the event.
+  - Then: It is back to it's default element.
 
-Feature 3: Specify Number of Events
-Scenario 1: When user hasn't specified a number, 32 events are shown by default.
-Given: The user is on the events listing page.
-When: The page displayed the list of events.
-Then: The events listing page shown as 32 (default).
+3. Specify Number of Events
+- Scenario 1: When user hasn't specified a number, 32 events are shown by default.
+  - Given: The user is on the events listing page.
+  - When: The page displayed the list of events.
+  - Then: The events listing page shown as 32 (default).
 
-Scenario 2: User can change the number of events displayed.
-Given: The user is on the events listing page that has 32 events shown.
-When: The user inputs different number in the search engine.
-Then: The events listing page refreshes, displaying the specified number they input.
+- Scenario 2: User can change the number of events displayed.
+  - Given: The user is on the events listing page that has 32 events shown.
+  - When: The user inputs different number in the search engine.
+  - Then: The events listing page refreshes, displaying the specified number they input.
 
-Feature 4: Use the App When Offline
-Scenario 1: Show cached data when there's no internet connection
-Given: The user has accessed the app while on internet connection before. 
-When: The user loses the internet connection.
-Then: The event application displays a message that the user is offline and only previously viewed events and cached data are still accessible.
+4. Use the App When Offline
+- Scenario 1: Show cached data when there's no internet connection
+  - Given: The user has accessed the app while on internet connection before. 
+  - When: The user loses the internet connection.
+  - Then: The event application displays a message that the user is offline and only previously viewed events and cached data are still accessible.
 
 Scenario 2: Show error when user changes search settings.
 Given: The user changes search setting.
