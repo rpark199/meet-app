@@ -89,5 +89,3 @@ Meet utilizes CI/CD practices to ensure the app is always in a deployable state.
 - **Bootstrap:** For responsive design and UI components.
 - **PWA Support:** To allow the app to be installed as a shortcut on mobile devices.
 - **Jest and Puppeteer:** For automated testing and end-to-end test coverage.
-
-## Installation and Setup
