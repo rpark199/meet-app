@@ -1,7 +1,7 @@
 # Meet App
 For my Meet App, I will be using serverless functions to build my app. This will allow me to ensure my app remains responsive because it is important for the app to have a real-time responsiveness. Also the app will be able to handle heavy amounts of data on its server. I will also be using the Google Calendar API to fetch upcoming events. Using the serverless functions will also allow me to easily integrate the geolocation service of the location of the user's interest as well as handling authentication.
 
-##Tech Stack
+## Tech Stack
 - Serverless
 - Google Calendar API
 - React
