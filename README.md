@@ -14,20 +14,20 @@ For my Meet App, I will be using serverless functions to build my app. This will
 
 ## Features
 1. Filter Events by City
--Scenario 1: When user hasn't searched for a city, show upcoming events from all cities.
-  -Given: The user is viewing a map. And the user views list of upcoming events.
-  -When: The user views the list of event that's next to a map.
-  -Then: The user are able to click on the event details.
+- Scenario 1: When user hasn't searched for a city, show upcoming events from all cities.
+  - Given: The user is viewing a map. And the user views list of upcoming events.
+  - When: The user views the list of event that's next to a map.
+  - Then: The user are able to click on the event details.
 
--Scenario 2: User should see a list of suggestions when they search for a city.
-  -Given: The user is viewing a map with a search engine with a filter.
-  -When: The user searches name of city in search engine.
-  -Then: The user views a list of events in the city they searched for.
+- Scenario 2: User should see a list of suggestions when they search for a city.
+  - Given: The user is viewing a map with a search engine with a filter.
+  - When: The user searches name of city in search engine.
+  - Then: The user views a list of events in the city they searched for.
 
--Scenario 3: User can select a city from the suggested list.
-  -Given: The user views the list of events from the city they searched.
-  -When: The user clicks on a city.
-  -Then: There will be see a list of events from the suggested list.
+- Scenario 3: User can select a city from the suggested list.
+  - Given: The user views the list of events from the city they searched.
+  - When: The user clicks on a city.
+  - Then: There will be see a list of events from the suggested list.
 
 Feature 2: Show/Hide Event Details
 Scenario 1: An event element is collapsed by default.
