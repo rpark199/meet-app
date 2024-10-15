@@ -62,19 +62,22 @@ For my Meet App, I will be using serverless functions to build my app. This will
   - When: The user loses the internet connection.
   - Then: The event application displays a message that the user is offline and only previously viewed events and cached data are still accessible.
 
-Scenario 2: Show error when user changes search settings.
-Given: The user changes search setting.
-When: The error message comes up.
-Then: Displays a message that the use is offline and displays only previously viewed events.
+- Scenario 2: Show error when user changes search settings.
+  - Given: The user changes search setting.
+  - When: The error message comes up.
+  - Then: Displays a message that the use is offline and displays only previously viewed events.
 
-Feature 5: Add an App Shortcut to the Home Screen
-Scenario 1: User can install the meet app as a shortcut on their device home screen.
-Given: The user has installed the app on their phone.
-When: The user presses add shortcut button to home screen.
-Then: The app will be shown on the home screen.
+5. Add an App Shortcut to the Home Screen
+- Scenario 1: User can install the meet app as a shortcut on their device home screen.
+  - Given: The user has installed the app on their phone.
+  - When: The user presses add shortcut button to home screen.
+  - Then: The app will be shown on the home screen.
 
-Feature 6: Display Charts Visualizing Event Details
-Scenario 1: Show a chart with a number of upcoming events in each city.
-Given: The user is viewing the event list page.
-When: The user taps on a "View Charts" button.
-Then: A chart will render showing details of the event
+6. Display Charts Visualizing Event Details
+- Scenario 1: Show a chart with a number of upcoming events in each city.
+  - Given: The user is viewing the event list page.
+  - When: The user taps on a "View Charts" button.
+  - Then: A chart will render showing details of the event
+ 
+## Development and Deployment
+
