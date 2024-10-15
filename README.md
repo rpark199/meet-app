@@ -13,7 +13,7 @@ For my Meet App, I will be using serverless functions to build my app. This will
 [View Meet Online](https://rpark199.github.io/meet-app/)
 
 ## Features
-1. Filter Events by City
+### 1. Filter Events by City
 - Scenario 1: When user hasn't searched for a city, show upcoming events from all cities.
   - Given: The user is viewing a map. And the user views list of upcoming events.
   - When: The user views the list of event that's next to a map.
@@ -29,7 +29,7 @@ For my Meet App, I will be using serverless functions to build my app. This will
   - When: The user clicks on a city.
   - Then: There will be see a list of events from the suggested list.
 
-2. Show/Hide Event Details
+### 2. Show/Hide Event Details
 - Scenario 1: An event element is collapsed by default.
   - Given: The user has not selected an event.
   - When: The user views a list of event.
@@ -45,7 +45,7 @@ For my Meet App, I will be using serverless functions to build my app. This will
   - When: The user clicks to collapse the event.
   - Then: It is back to it's default element.
 
-3. Specify Number of Events
+### 3. Specify Number of Events
 - Scenario 1: When user hasn't specified a number, 32 events are shown by default.
   - Given: The user is on the events listing page.
   - When: The page displayed the list of events.
@@ -56,7 +56,7 @@ For my Meet App, I will be using serverless functions to build my app. This will
   - When: The user inputs different number in the search engine.
   - Then: The events listing page refreshes, displaying the specified number they input.
 
-4. Use the App When Offline
+### 4. Use the App When Offline
 - Scenario 1: Show cached data when there's no internet connection
   - Given: The user has accessed the app while on internet connection before. 
   - When: The user loses the internet connection.
@@ -67,13 +67,13 @@ For my Meet App, I will be using serverless functions to build my app. This will
   - When: The error message comes up.
   - Then: Displays a message that the use is offline and displays only previously viewed events.
 
-5. Add an App Shortcut to the Home Screen
+### 5. Add an App Shortcut to the Home Screen
 - Scenario 1: User can install the meet app as a shortcut on their device home screen.
   - Given: The user has installed the app on their phone.
   - When: The user presses add shortcut button to home screen.
   - Then: The app will be shown on the home screen.
 
-6. Display Charts Visualizing Event Details
+### 6. Display Charts Visualizing Event Details
 - Scenario 1: Show a chart with a number of upcoming events in each city.
   - Given: The user is viewing the event list page.
   - When: The user taps on a "View Charts" button.
