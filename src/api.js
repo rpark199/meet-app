@@ -1,5 +1,5 @@
 import mockData from './mock-data';
-import NProgress from "nprogess";
+import NProgress from "nprogress";
 
 export const extractLocations = (events) => {
   const extractedLocations = events.map((event) => event.location);
