@@ -6,7 +6,6 @@ import CityEventsChart from "./components/CityEventsChart";
 import EventGenresChart from "./components/EventGenresChart";
 import { getEvents, extractLocations } from "./api";
 import "./App.css";
-//import { mockData } from "./mock-data";
 import { InfoAlert, ErrorAlert, WarningAlert } from './components/Alert';
 
 const App = () => {
@@ -23,7 +22,8 @@ const App = () => {
     const filteredEvents = currentCity === "See all cities" ? 
       allEvents :
       allEvents.filter(event => event.location === currentCity)
-    setEvents(filteredEvents.slice(0, currentNOE));
+    const currentEvents = await filteredEvents.slice(0, currentNOE);
+    setEvents(currentEvents);
     setAllLocations(extractLocations(allEvents));
   }
 
