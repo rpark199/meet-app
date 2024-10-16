@@ -4,7 +4,7 @@ import { PieChart, Pie, Sector, Legend, Cell, ResponsiveContainer } from 'rechar
 const EventGenresChart = ({ events }) => {
     const [data, setData] = useState([]);
     const genres = ['React', 'JavaScript', 'Node', 'jQuery', 'Angular'];
-  
+
     useEffect(() => {
       setData(getData());
     }, [`${events}`]);
