@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+/*import { useState, useEffect } from 'react';
 import { PieChart, Pie, Sector, Legend, Cell, ResponsiveContainer } from 'recharts';
 
 const EventGenresChart = ({ events }) => {
@@ -74,4 +74,4 @@ const EventGenresChart = ({ events }) => {
   
   }
   
-  export default EventGenresChart;
+  export default EventGenresChart;*/
