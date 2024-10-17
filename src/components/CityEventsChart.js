@@ -1,4 +1,4 @@
-/*import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import {
   ScatterChart,
   Scatter,
@@ -44,4 +44,4 @@ const CityEventsChart = ({ allLocations, events }) => {
       );
 }
 
-export default CityEventsChart;*/
+export default CityEventsChart;
